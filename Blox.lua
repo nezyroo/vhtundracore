@@ -14,7 +14,7 @@ local Window = Rayfield:CreateWindow({
       Invite = "https://discord.gg/D4AdTTAA", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
    },
-   KeySystem = true, -- Set this to true to use our key system
+   KeySystem = false, -- Set this to true to use our key system
    KeySettings = {
       Title = "Key | blox fruit Hub",
       Subtitle = "Key System",
@@ -131,12 +131,10 @@ local Toggle = MainTab:CreateToggle({
 
 local TPTab = Window:CreateTab("🏝 Teleports", nil) -- Title, Image
 
-local Button1 = TPTab:CreateButton({
-   Name = "Mirane Island",
-   Callback = function()
-			tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(45, Enum.EasingStyle.Linear)
-tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-2896.6865234375, 41.488861083984375, 2009.27490234375)}):Play()
-   end,
+TeleportSection:NewButton("Pirate Island", "Teleport you there", function()
+            tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(45, Enum.EasingStyle.Linear)
+tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(1041.8861083984375, 16.273563385009766, 1424.93701171875)}):Play()
+        end)
 })
 
 local Button2 = TPTab:CreateButton({
