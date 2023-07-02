@@ -132,7 +132,7 @@ local Toggle = MainTab:CreateToggle({
 local TPTab = Window:CreateTab("🏝 Teleports", nil) -- Title, Image
 
 local Button2 = TPTab:CreateButton({
-   Name = "Pirate Island",
+   Name = "Marine Island",
    Callback = function()
         --Teleport2
    end,
