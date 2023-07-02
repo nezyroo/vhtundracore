@@ -131,10 +131,11 @@ local Toggle = MainTab:CreateToggle({
 
 local TPTab = Window:CreateTab("🏝 Teleports", nil) -- Title, Image
 
-TeleportSection:NewButton("Pirate Island", "Teleport you there", function()
-            tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(45, Enum.EasingStyle.Linear)
-tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(1041.8861083984375, 16.273563385009766, 1424.93701171875)}):Play()
-        end)
+local Button2 = TPTab:CreateButton({
+   Name = "Pirate Island",
+   Callback = function()
+        --Teleport2
+   end,
 })
 
 local Button2 = TPTab:CreateButton({
